@@ -463,7 +463,7 @@ func syncUserSettings(sshFlags string, host string, back bool) error {
 		return err
 	}
 
-	const remoteSettingsDir = ".local/share/code-server/User/"
+	const remoteSettingsDir = "~/.local/share/code-server/User/"
 
 	var (
 		src  = localConfDir + "/"
@@ -489,7 +489,7 @@ func syncExtensions(sshFlags string, host string, back bool) error {
 		return err
 	}
 
-	const remoteExtensionsDir = ".local/share/code-server/extensions/"
+	const remoteExtensionsDir = "~/.local/share/code-server/extensions/"
 
 	var (
 		src  = localExtensionsDir + "/"
