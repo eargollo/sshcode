@@ -153,7 +153,7 @@ func gitbashWindowsDir(dir string) string {
 // This function returns an array with MINGW64 mount points including relative home dir
 func gitbashMountPointsAndHome() [][]string {
 	// Initialize mount points with home dir
-	mountPoints := [][]string{[]string{filepath.ToSlash(os.Getenv("HOME")), "~"}}
+	mountPoints := [][]string{{filepath.ToSlash(os.Getenv("HOME")), "~"}}
 	// Load mount points
 	out, err := exec.Command("mount").Output()
 	if err != nil {
